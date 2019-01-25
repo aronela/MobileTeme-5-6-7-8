@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Tema 8
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-item>
+      <ion-label stacked>Phone number</ion-label>
+      <ion-input type="text" maxlength="10" [(ngModel)]="phoneNumber"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <button ion-button (click)="formatNumber()">Format</button>
+  <br><br>
+
+  <h3>{{formattedNumber | phone}}</h3>
+
+</ion-content>

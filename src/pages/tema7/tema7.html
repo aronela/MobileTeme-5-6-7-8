@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Tema 7
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let e of elements">
+      <ion-label>
+        <ion-icon name="{{e.icons}}"></ion-icon>
+        &nbsp;&nbsp;&nbsp;
+        <span>{{e.denumire}}</span>
+      </ion-label>
+      <ion-toggle color="primary" [(ngModel)]="e.checked" (ionChange)="toggleChange()"></ion-toggle>
+    </ion-item>
+  </ion-list>
+</ion-content>

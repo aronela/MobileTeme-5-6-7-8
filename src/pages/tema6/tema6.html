@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Checkbox
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-item *ngFor="let c of cars">
+    <ion-label>{{c.denumire}}</ion-label>
+    <ion-checkbox color="dark" checked="false" [(ngModel)]="c.selected"></ion-checkbox>
+  </ion-item>
+
+  <p padding *ngIf="selectedCarsNumber()">
+    <ion-icon name="car"></ion-icon>&nbsp; &nbsp;<strong>Imi plac:</strong>
+
+    <ng-container *ngFor="let c of cars">
+      <span *ngIf="c.selected">{{c.denumire}}<span *ngIf="c.denumire=='Dacia'"> - Daca Ai Cap Ia-ti Altceva! :)
+      </span>{{','}}{{' '}}</span>
+    </ng-container>
+  </p>
+
+</ion-content>
